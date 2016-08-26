@@ -33,3 +33,35 @@ describe('wareki', function() {
         assert(w.fromWareki('H', '100') === -1);
     });
 });
+describe('seireki', function() {
+    it('meiji', function() {
+        assert(w.toWareki('1868')[0] === 'M');
+        assert(w.toWareki('1868')[1] === 1);
+        assert(w.toWareki('1869')[0] === 'M');
+        assert(w.toWareki('1869')[1] === 2);
+        assert(w.toWareki('1911')[0] === 'M');
+        assert(w.toWareki('1911')[1] === 44);
+    });
+    it('taisho', function() {
+        assert(w.toWareki('1912')[0] === 'T');
+        assert(w.toWareki('1912')[1] === 1);
+        assert(w.toWareki('1913')[0] === 'T');
+        assert(w.toWareki('1913')[1] === 2);
+        assert(w.toWareki('1925')[0] === 'T');
+        assert(w.toWareki('1925')[1] === 14);
+    });
+    it('showa', function() {
+        assert(w.toWareki('1926')[0] === 'S');
+        assert(w.toWareki('1926')[1] === 1);
+        assert(w.toWareki('1927')[0] === 'S');
+        assert(w.toWareki('1927')[1] === 2);
+        assert(w.toWareki('1988')[0] === 'S');
+        assert(w.toWareki('1988')[1] === 63);
+    });
+    it('heisei', function() {
+        assert(w.toWareki('1989')[0] === 'H');
+        assert(w.toWareki('1989')[1] === 1);
+        assert(w.toWareki('1990')[0] === 'H');
+        assert(w.toWareki('1990')[1] === 2);
+    });
+});
