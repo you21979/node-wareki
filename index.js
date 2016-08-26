@@ -1,1 +1,1 @@
-module.expoerts = require("./lib/wareki");
+module.exports = require("./lib/wareki");
