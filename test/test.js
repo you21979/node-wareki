@@ -29,7 +29,10 @@ describe('wareki', function() {
         assert(w.fromWareki('H', '00') === -1);
         assert(w.fromWareki('H', '01') === 1989);
         assert(w.fromWareki('H', '02') === 1990);
-        assert(w.fromWareki('H', '99') === 2087);
+        assert(w.fromWareki('H', '29') === 2017);
+        assert(w.fromWareki('H', '30') === 2018);
+        assert(w.fromWareki('H', '31') === -1);
+        assert(w.fromWareki('H', '99') === -1);
         assert(w.fromWareki('H', '100') === -1);
     });
 });
@@ -63,5 +66,7 @@ describe('seireki', function() {
         assert(w.toWareki('1989')[1] === 1);
         assert(w.toWareki('1990')[0] === 'H');
         assert(w.toWareki('1990')[1] === 2);
+        assert(w.toWareki('2017')[0] === 'H');
+        assert(w.toWareki('2017')[1] === 29);
     });
 });
